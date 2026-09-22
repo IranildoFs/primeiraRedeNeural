@@ -79,15 +79,15 @@ async function predict(model, pessoa) {
 }
 // Exemplo de pessoas para treino (cada pessoa com idade, cor e localização)
 // const pessoas = [
-//     { nome: "Erick", idade: 30, cor: "azul", localizacao: "São Paulo" },
+//     { nome: "Iranildo", idade: 30, cor: "azul", localizacao: "São José do Rio Preto" },
 //     { nome: "Ana", idade: 25, cor: "vermelho", localizacao: "Rio" },
 //     { nome: "Carlos", idade: 40, cor: "verde", localizacao: "Curitiba" }
 // ];
 
 // Vetores de entrada com valores já normalizados e one-hot encoded
-// Ordem: [idade_normalizada, azul, vermelho, verde, São Paulo, Rio, Curitiba]
+// Ordem: [idade_normalizada, azul, vermelho, verde, São José do Rio Preto, Rio, Curitiba]
 // const tensorPessoas = [
-//     [0.33, 1, 0, 0, 1, 0, 0], // Erick
+//     [0.33, 1, 0, 0, 1, 0, 0], // Iranildo
 //     [0, 0, 1, 0, 0, 1, 0],    // Ana
 //     [1, 0, 0, 1, 0, 0, 1]     // Carlos
 // ]
@@ -95,7 +95,7 @@ async function predict(model, pessoa) {
 // Usamos apenas os dados numéricos, como a rede neural só entende números.
 // tensorPessoasNormalizado corresponde ao dataset de entrada do modelo.
 const tensorPessoasNormalizado = [
-    [0.33, 1, 0, 0, 1, 0, 0], // Erick
+    [0.33, 1, 0, 0, 1, 0, 0], // Iranildo
     [0, 0, 1, 0, 0, 1, 0],    // Ana
     [1, 0, 0, 1, 0, 0, 1]     // Carlos
 ]
@@ -104,7 +104,7 @@ const tensorPessoasNormalizado = [
 // [premium, medium, basic]
 const labelsNomes = ["premium", "medium", "basic"]; // Ordem dos labels
 const tensorLabels = [
-    [1, 0, 0], // premium - Erick
+    [1, 0, 0], // premium - Iranildo
     [0, 1, 0], // medium - Ana
     [0, 0, 1]  // basic - Carlos
 ];
@@ -128,7 +128,7 @@ const pessoaTensorNormalizado = [
         1,    // cor azul
         0,    // cor vermelho
         0,    // cor verde
-        0,    // localização São Paulo
+        0,    // localização São José do Rio Preto
         1,    // localização Rio
         0     // localização Curitiba
     ]
