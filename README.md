@@ -1,4 +1,4 @@
-# PrimeiraRedeNeural: Classificador de Categoria de Usuário com TensorFlow.js
+# Minha Primeira Rede Neural: Classificador de Categoria de Usuário com TensorFlow.js
 
 Rede neural simples, construída com [TensorFlow.js](https://www.tensorflow.org/js) (`@tensorflow/tfjs-node`), que prevê a categoria de um usuário (`premium`, `medium` ou `basic`) a partir de idade, cor e localização.
 
